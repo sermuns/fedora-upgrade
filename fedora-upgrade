@@ -237,14 +237,14 @@ function choose_upgrade_method() {
 
 function mount_cache_dnf() {
   if [ -n "$OPTS_TMPFS" ]; then
-    mount -t tmpfs none -o "size=$OPTS_TMPFS" /var/cache/dnf/
+    mount -t tmpfs none -o "size=$OPTS_TMPFS" /var/cache/libdnf5/
     TMPFS_MOUNTED=1
   fi
 }
 
 function umount_cache_dnf() {
   if [ -n "$OPTS_TMPFS" -a 0$TMPFS_MOUNTED -eq 1 ]; then
-    umount /var/cache/dnf/
+    umount /var/cache/libdnf5/
     TMPFS_MOUNTED=0
   fi
 }
