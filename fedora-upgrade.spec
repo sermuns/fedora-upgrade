@@ -1,5 +1,5 @@
 Name:		fedora-upgrade
-Version:	42.2
+Version:	42.3
 Release:	1%{?dist}
 Summary:	Upgrade Fedora to next version using dnf upgrade (unofficial tool)
 
@@ -87,6 +87,12 @@ install -m755 rpm-print-name-from-filename.py %{buildroot}%{_bindir}/rpm-print-n
 %license LICENSE
 
 %changelog
+* Mon Aug 18 2025 Miroslav Suchý <msuchy@redhat.com> 42.3-1
+- add upgrade to Fedora 43
+- remove upgrade to F40 that is EOL
+- typo
+- dnf5 uses /var/cache/libdnf5
+
 * Mon Jun 09 2025 Miroslav Suchý <msuchy@redhat.com> 42.2-1
 - do not check if F42 is prerelease
 
