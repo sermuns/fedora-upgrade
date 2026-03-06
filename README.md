@@ -5,8 +5,7 @@ Upgrade Fedora to next version using dnf upgrade.
 
 This is an attempt to automatize steps as listed here:
 
-https://fedoraproject.org/wiki/Upgrading_Fedora_using_package_manager
-
+https://docs.fedoraproject.org/en-US/quick-docs/upgrading-fedora-online/
 
 What works
 ==========
