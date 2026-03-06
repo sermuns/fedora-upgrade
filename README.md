@@ -107,4 +107,4 @@ If you find bug, please [report](https://bugzilla.redhat.com/enter_bug.cgi?produ
 License
 =======
 
-GPLv2
+[GPL-2.0-only](https://spdx.org/licenses/GPL-2.0-only.html)
