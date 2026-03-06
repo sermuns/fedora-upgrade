@@ -296,8 +296,8 @@ if [ -n "$OPTS_HELP" ]; then
   exit 0;
 fi
 
-if [ 0$TARGET_VERSION -eq 41 ]; then
-  # Fedora 40 to 41
+if [ 0$TARGET_VERSION -eq 44 ]; then
+  # Fedora 43 to 44
   warn_if_graphics_mode
   welcome_banner $TARGET_VERSION
 
@@ -308,8 +308,8 @@ if [ 0$TARGET_VERSION -eq 41 ]; then
 
   dnf clean -q dbcache metadata
   enable_updates=""
-  #echo "Checking if this is pre-release"
-  #enable_updates=$(is_prerelease $TARGET_VERSION )
+  echo "Checking if this is pre-release"
+  enable_updates=$(is_prerelease $TARGET_VERSION )
 
   choose_upgrade_method
   echo -e $1
@@ -331,7 +331,7 @@ if [ 0$TARGET_VERSION -eq 41 ]; then
 
   cleanup_cache
   rpmconf_after_upgrade
-  reset_service_priorities
+  #reset_service_priorities
   unwanted_packages2 $FEDORA_VERSION
   remove_old_gpg_keys
   UPGRADE_FINISHED=1
@@ -409,7 +409,7 @@ elif [ 0$TARGET_VERSION -eq 43 ]; then
 
   cleanup_cache
   rpmconf_after_upgrade
-  reset_service_priorities
+  #reset_service_priorities
   unwanted_packages2 $FEDORA_VERSION
   remove_old_gpg_keys
   UPGRADE_FINISHED=1
