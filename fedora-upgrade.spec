@@ -1,5 +1,5 @@
 Name:		fedora-upgrade
-Version:	42.3
+Version:	42.4
 Release:	1%{?dist}
 Summary:	Upgrade Fedora to next version using dnf upgrade (unofficial tool)
 
@@ -80,6 +80,14 @@ install -m755 rpm-print-name-from-filename.py %{buildroot}%{_bindir}/rpm-print-n
 %license LICENSE
 
 %changelog
+* Tue Mar 10 2026 Miroslav Suchý <msuchy@redhat.com> 42.4-1
+- migrate from python3-dnf to python-libdnf5
+- use spdx id as license name
+- update link to documentation
+- add upgrade to F44
+- do not check if F43 is prerelease
+- simplify spec - remove f40- code
+
 * Mon Aug 18 2025 Miroslav Suchý <msuchy@redhat.com> 42.3-1
 - add upgrade to Fedora 43
 - remove upgrade to F40 that is EOL
