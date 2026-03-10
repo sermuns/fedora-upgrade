@@ -37,7 +37,7 @@ https://fedoraproject.org/wiki/Upgrading
 %package -n remove-retired-packages
 Summary: Remove retired distribution's packages
 Requires: curl
-Requires: python3-dnf
+Requires: python3-libdnf5
 
 %description -n remove-retired-packages
 Script that removes packages removed from

@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-import dnf
+import libdnf5
 import sys
 
-subject = dnf.subject.Subject(sys.argv[1])
-possible_nevra = subject.get_nevra_possibilities()
-print(possible_nevra[0].name)
-
+nevra = libdnf5.rpm.Nevra.parse(sys.argv[1], libdnf5.rpm.VectorNevraForm(1, libdnf5.rpm.Nevra.Form_NEVRA)).pop()
+print(nevra.get_name())
